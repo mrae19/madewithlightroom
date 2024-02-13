@@ -66,27 +66,25 @@
                                      */
                                     function getMobileOperatingSystem() {
                                         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-                                        // Windows Phone must come first because its UA also contains "Android"
-                                        if (/windows phone/i.test(userAgent)) {
-                                            return "Windows Phone";
-                                        }
-
+                                        
                                         if (/android/i.test(userAgent)) {
                                             return "Android";
                                         }
 
                                         // iOS detection from: http://stackoverflow.com/a/9039885/177710
-                                        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                                        else (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                                             return "iOS";
                                         }
 
                                         return "unknown";
                                     }
+
+                                    console.log(getMobileOperatingSystem)
                                 </script>
 
                                 <div id="iOS" class="mt--20 text-center">
                                     <a href="https://google.ca"><img class="" width="200px"src="assets/images/appstore/iosdownload.svg" alt="Corporate Logo"></a>
+
                                 </div>
 
                                 <div id="android" class="mt--20 text-center">
@@ -120,6 +118,82 @@
             </div>
         </div>
         <!-- End Slider Area  -->
+
+
+        <!-- Start template slider area  -->
+        <div class="template-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bg-color-lessdark bg-lessdark-gradient theme-shape rbt-alignwide rainbow-section-gap radius">
+                            <div class="rbt-inner-alignwide">
+                                <div class="wrapper template-slider-wrapper mb--60">
+                                    <h2 class="theme-gradient">Lightroom Academy</h2>
+                                    <h3 class="title">Become a better photographer <br /> with easy to follow tutorials.</h3>
+                                    <p class="description">Lightroom Academy makes it easy to learn the basics of photography, and take your photos to the next level. If you're just starting out, and want to learn the basics of composition, light, and editing - Academy is for you. Check out the curated collections below to get started.</p>
+                                </div>
+
+                                <!-- Start main Template Slider  -->
+                                <div class="row row--15">
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30" data-sal="slide-up" data-sal-duration="700">
+                                    <div class="rainbow-card box-card-style-default">
+                                        <div class="inner">
+                                            <div class="thumbnail"><a class="image" href="https://lightroom.adobe.com/academy/genres/night/introduction"><img src="assets/images/academythumbs/astro.jpeg" alt="Blog Image"></a></div>
+                                            <div class="content">
+                                                <ul class="rainbow-meta-list">
+                                                    <li><a href="https://lightroom.adobe.com/academy/genres/night/introduction">Dr. Mike Shaw</a></li>
+                                                    <li class="separator">/</li>
+                                                    <li>3 Minute Read</li>
+                                                </ul>
+                                                <h4 class="title"><a href="bhttps://lightroom.adobe.com/academy/genres/night/introduction">Introduction to Night Photography
+                                                        </a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                                    <div class="rainbow-card box-card-style-default">
+                                        <div class="inner">
+                                            <div class="thumbnail"><a class="image" href="https://lightroom.adobe.com/academy/genres/travel/introduction"><img src="assets/images/academythumbs/overland1.jpeg" alt="Blog Image"></a></div>
+                                            <div class="content">
+                                                <ul class="rainbow-meta-list">
+                                                    <li><a href="https://lightroom.adobe.com/academy/genres/travel/introduction">Susan Portnoy</a></li>
+                                                    <li class="separator">/</li>
+                                                    <li>3 Minute Read</li>
+                                                </ul>
+                                                <h4 class="title"><a href="https://lightroom.adobe.com/academy/genres/travel/introduction">Introduction to Travel Photogrpahy</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+                                    <div class="rainbow-card box-card-style-default">
+                                        <div class="inner">
+                                            <div class="thumbnail">
+                                                <a class="image" href="https://lightroom.adobe.com/academy/principles/composition/introduction"><img src="assets/images/academythumbs/vanlife.jpeg" alt="Blog Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <ul class="rainbow-meta-list">
+                                                    <li><a href="https://lightroom.adobe.com/academy/principles/composition/introduction">Lightroom Education Team</a></li>
+                                                    <li class="separator">/</li>
+                                                    <li>2 Minute Read</li>
+                                                </ul>
+                                                <h4 class="title"><a href="https://lightroom.adobe.com/academy/principles/composition/introduction">Introduction to Composition.</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start template slider area  -->
+
 
         
         <!-- Footer Removed -->
