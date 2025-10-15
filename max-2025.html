@@ -98,7 +98,8 @@
             background: #31A8FF;
             border: none;
             color: white;
-            font-weight: 600;
+            font-weight: 700;
+            border-radius: 8px;
         }
         
         .header-btn .btn-default:hover {
@@ -213,51 +214,18 @@
                     </div>
                     <div class="col-lg-9 col-md-6 col-8 position-static">
                         <div class="header-right">
-                            <nav class="mainmenu-nav d-none d-lg-block">
-                                <ul class="mainmenu">
-                                    <li><a href="#hero">Home</a></li>
-                                    <li><a href="#main-content">Resources</a></li>
-                                    <li><a href="#contact">Contact</a></li>
-                                </ul>
-                            </nav>
-                            <!-- Start Mobile-Menu-Bar -->
-                            <div class="mobile-menu-bar ml--5 d-block d-lg-none">
-                                <div class="hamberger">
-                                    <button class="hamberger-button">
-                                        <i class="feather-menu"></i>
-                                    </button>
-                                </div>
+                            <!-- Download Lightroom for Mobile Button -->
+                            <div class="header-btn">
+                                <a class="btn-default btn-small" href="https://apps.apple.com/app/adobe-lightroom/id804177739" target="_blank">
+                                    Download Lightroom
+                                </a>
                             </div>
-                            <!-- Start Mobile-Menu-Bar -->
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         <!-- End Header Area  -->
-        
-        <div class="popup-mobile-menu">
-            <div class="inner">
-                <div class="header-top">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img class="logo-light" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
-                            <img class="logo-dark" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
-                        </a>
-                    </div>
-                    <div class="close-menu">
-                        <button class="close-button">
-                            <i class="feather-x"></i>
-                        </button>
-                    </div>
-                </div>
-                <ul class="mainmenu">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#main-content">Resources</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
 
         <!-- Start Theme Style  -->
         <div>
@@ -273,10 +241,10 @@
                     <div class="col-lg-12">
                         <div class="rainbow-hero-content text-center">
                             <h1 class="title" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
-                                Welcome to the <span class="theme-gradient">Lightroom Booth</span> at Adobe MAX 2024
+                                <span class="theme-gradient">Lightroom</span> at MAX 2025
                             </h1>
                             <p class="subtitle" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
-                                Discover the power of Adobe Lightroom and connect with fellow photographers
+                                It was great to connect with you at MAX 2025. Explore the links below to learn what's new at MAX and to join our Prerelease programs
                             </p>
                         </div>
                     </div>
@@ -289,16 +257,8 @@
         <div id="main-content" class="main-content">
             
             <!-- Start Links Section  -->
-            <div class="rainbow-service-area rainbow-section-gap">
+            <div class="rainbow-service-area" style="padding-top: 40px;">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-title text-center" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
-                                <h2 class="title w-600 mb--20">Explore Lightroom Resources</h2>
-                                <p class="description">Everything you need to get started with Adobe Lightroom</p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row row--15">
                         <!-- Download Lightroom Card -->
                         <div class="col-lg-4 col-md-6 col-12">
@@ -435,107 +395,41 @@
 
         <!-- Start Footer Area  -->
         <footer class="rainbow-footer footer-style-default variation-two">
-            <div class="rainbow-callto-action clltoaction-style-default style-7">
-                <div class="container">
-                    <div class="row row--0 align-items-center content-wrapper">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="inner">
-                                <div class="content text-left">
-                                    <div class="logo">
-                                        <a href="index.html">
-                                            <img class="logo-light" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
-                                            <img class="logo-dark" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
-                                        </a>
-                                    </div>
-                                    <p class="subtitle" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">Join the Made with Lightroom community and discover the power of professional photo editing.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
-                            <div class="call-to-btn text-left mt_sm--20 text-lg-right">
-                                <a class="btn-default" href="#hero">Back to Top <i class="feather-arrow-up"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="rainbow-footer-widget">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget text-center text-lg-start">
                                 <h4 class="title">Resources</h4>
                                 <div class="inner">
                                     <ul class="footer-link link-hover">
-                                        <li><a href="#">Download Lightroom</a></li>
-                                        <li><a href="#">Tutorials</a></li>
-                                        <li><a href="#">Presets</a></li>
-                                        <li><a href="#">Support</a></li>
+                                        <li><a href="https://max.adobe.com/" target="_blank">Adobe MAX 2024</a></li>
+                                        <li><a href="https://lightroom.adobe.com/" target="_blank">Learn more about Lightroom</a></li>
+                                        <li><a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank">Download Lightroom</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="rainbow-footer-widget">
-                                <div class="widget-menu-top">
-                                    <h4 class="title">Community</h4>
-                                    <div class="inner">
-                                        <ul class="footer-link link-hover">
-                                            <li><a href="#">Forum</a></li>
-                                            <li><a href="#">Gallery</a></li>
-                                            <li><a href="#">Events</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="rainbow-footer-widget">
-                                <h4 class="title">Adobe MAX</h4>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="#">Schedule</a></li>
-                                        <li><a href="#">Demos</a></li>
-                                        <li><a href="#">Photo Walk</a></li>
-                                        <li><a href="#">Portfolio Review</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="rainbow-footer-widget">
-                                <h4 class="title">Connect</h4>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="#">Instagram</a></li>
-                                        <li><a href="#">Twitter</a></li>
-                                        <li><a href="#">YouTube</a></li>
-                                        <li><a href="#">LinkedIn</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="rainbow-footer-widget">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget text-center text-lg-start">
                                 <h4 class="title">Stay Connected</h4>
                                 <div class="inner">
-                                    <h6 class="subtitle">Join thousands of photographers worldwide</h6>
-                                    <ul class="social-icon social-default justify-content-start">
-                                        <li><a href="https://www.instagram.com/adobelightroom/">
+                                    <h6 class="subtitle">Follow Adobe Lightroom</h6>
+                                    <ul class="social-icon social-default justify-content-center justify-content-lg-start">
+                                        <li><a href="https://www.instagram.com/lightroom" target="_blank">
                                                 <i class="feather-instagram"></i>
                                             </a>
                                         </li>
-                                        <li><a href="https://www.twitter.com/adobelightroom">
+                                        <li><a href="https://www.twitter.com/lightroom" target="_blank">
                                                 <i class="feather-twitter"></i>
                                             </a>
                                         </li>
-                                        <li><a href="https://www.youtube.com/adobelightroom">
-                                                <i class="feather-youtube"></i>
+                                        <li><a href="https://www.threads.net/@lightroom" target="_blank">
+                                                <i class="feather-message-circle"></i>
                                             </a>
                                         </li>
-                                        <li><a href="https://www.facebook.com/adobelightroom">
-                                                <i class="feather-facebook"></i>
+                                        <li><a href="https://www.youtube.com/lightroom" target="_blank">
+                                                <i class="feather-youtube"></i>
                                             </a>
                                         </li>
                                     </ul>
