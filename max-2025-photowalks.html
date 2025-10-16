@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-style-mode" content="0"> <!-- 0 == light, 1 == dark -->
+
+    <title>Thank You for Joining Our Photowalks - Adobe MAX 2025</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/animation.css">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnify.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/plugins/lightbox.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Enhanced Card Styling for Adobe MAX Booth with Lightroom Brand Colors */
+        .rainbow-service.service-style-default {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 30, 54, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .rainbow-service.service-style-default:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 30, 54, 0.15);
+            border-color: #31A8FF;
+        }
+        
+        .rainbow-service.service-style-default:active {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(49, 168, 255, 0.3);
+        }
+        
+        .rainbow-service .inner {
+            padding: 24px;
+        }
+        
+        .rainbow-service .title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #001E36;
+        }
+        
+        .rainbow-service .description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #6b7280;
+            margin-bottom: 0;
+        }
+        
+        /* Mobile-optimized card styling */
+        @media (max-width: 768px) {
+            .rainbow-service {
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+            
+            .rainbow-service .inner {
+                padding: 0;
+            }
+            
+            .rainbow-service .title {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            
+            .rainbow-service .description {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+        }
+        
+        /* Card link styling */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .card-link:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header button styling with Lightroom colors */
+        .header-btn .btn-default {
+            background: #001E36;
+            border: none;
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+        }
+        
+        .header-btn .btn-default:hover {
+            background: #002A4A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 30, 54, 0.3);
+        }
+        
+        /* Hero section gradient with Lightroom colors */
+        .theme-gradient {
+            background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Section titles with Lightroom colors */
+        .section-title .subtitle .theme-gradient {
+            background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Footer call-to-action with Lightroom colors */
+        .rainbow-callto-action .btn-default {
+            background: #31A8FF;
+            border: none;
+            color: white;
+        }
+        
+        .rainbow-callto-action .btn-default:hover {
+            background: #1E8FE8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(49, 168, 255, 0.3);
+        }
+        
+        /* Logo sizing for Lightroom app icon */
+        .logo img {
+            height: 40px;
+            width: auto;
+            max-width: 200px;
+        }
+        
+        @media (max-width: 768px) {
+            .logo img {
+                height: 35px;
+            }
+        }
+        
+        /* Additional Lightroom brand color accents */
+        .rainbow-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(49, 168, 255, 0.1);
+        }
+        
+        .mainmenu a:hover {
+            color: #31A8FF;
+        }
+        
+        .rainbow-footer {
+            background: linear-gradient(135deg, #001E36 0%, #001A2E 100%);
+            color: white;
+        }
+        
+        .rainbow-footer .title {
+            color: #31A8FF;
+        }
+        
+        .rainbow-footer .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .rainbow-footer .footer-link a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .rainbow-footer .footer-link a:hover {
+            color: #31A8FF;
+        }
+        
+        .copyright-area {
+            background: #001A2E;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .copyright-area a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .copyright-area a:hover {
+            color: #31A8FF;
+        }
+        
+        /* Models showcase styling */
+        .model-avatar {
+            transition: transform 0.3s ease;
+        }
+        
+        .rainbow-service:hover .model-avatar {
+            transform: scale(1.1);
+        }
+        
+        .rainbow-service .inner.text-center a {
+            transition: all 0.3s ease;
+        }
+        
+        .rainbow-service .inner.text-center a:hover {
+            color: #1E8FE8 !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Photowalk schedule styling */
+        .rainbow-service .description strong {
+            color: #31A8FF;
+            font-weight: 700;
+        }
+        
+        /* Photowalk hosts styling */
+        .host-avatar {
+            transition: transform 0.3s ease;
+        }
+        
+        .rainbow-service:hover .host-avatar {
+            transform: scale(1.05);
+        }
+        
+        .rainbow-service .description:first-of-type {
+            margin-bottom: 8px;
+        }
+        
+        .rainbow-service .description:last-of-type {
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Navigation styling */
+        .photowalk-nav {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .photowalk-nav a:hover {
+            background: #31A8FF !important;
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(49, 168, 255, 0.3) !important;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        @media (max-width: 768px) {
+            .photowalk-nav ul {
+                gap: 10px !important;
+            }
+            
+            .photowalk-nav a {
+                padding: 8px 16px !important;
+                font-size: 14px !important;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 992px) {
+            .photowalk-nav ul {
+                gap: 8px !important;
+            }
+            
+            .photowalk-nav a {
+                padding: 6px 12px !important;
+                font-size: 13px !important;
+            }
+        }
+        
+        /* MAX Portal button styling */
+        .btn-default:hover {
+            background: #1E8FE8 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(49, 168, 255, 0.3) !important;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main class="page-wrapper">
+        
+        <!-- Start Header Area  -->
+        <header class="rainbow-header header-default header-not-transparent header-sticky">
+            <div class="container position-relative">
+                <div class="row align-items-center row--0">
+                    <div class="col-lg-3 col-md-6 col-4">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img class="logo-light" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
+                                <img class="logo-dark" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-6 col-8 position-static">
+                        <div class="header-right">
+                            <!-- Download Lightroom for Mobile Button -->
+                            <div class="header-btn">
+                                <a class="btn-default btn-small" href="https://apps.apple.com/app/adobe-lightroom/id804177739" target="_blank">
+                                    Download Lightroom
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header Area  -->
+
+        <!-- Start Navigation Menu  -->
+        <div class="rainbow-service-area" style="padding: 30px 0; background: white;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <nav class="photowalk-nav">
+                                <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+                                    <li><a href="#hosts" style="color: #001E36; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: #f8f9fa; transition: all 0.3s ease;">Hosts</a></li>
+                                    <li><a href="#models" style="color: #001E36; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: #f8f9fa; transition: all 0.3s ease;">Models</a></li>
+                                    <li><a href="#resources" style="color: #001E36; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: #f8f9fa; transition: all 0.3s ease;">Resources</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navigation Menu  -->
+
+        <!-- Start Theme Style  -->
+        <div>
+            <div class="rainbow-gradient-circle"></div>
+            <div class="rainbow-gradient-circle theme-pink"></div>
+        </div>
+        <!-- End Theme Style  -->
+
+        <!-- Start Hero Area  -->
+        <div id="hero" class="rainbow-hero-area rainbow-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="rainbow-hero-content text-center">
+                            <h1 class="title" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
+                                <span class="theme-gradient">Thank You</span> for Joining Our Photowalks!
+                            </h1>
+                            <p class="subtitle" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
+                                We hope you enjoyed capturing amazing moments around Los Angeles. Use the resources below to continue your photography journey and connect with our community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Hero Area  -->
+
+
+        <!-- Start Main Content  -->
+        <div id="main-content" class="main-content">
+            
+
+            <!-- Start Photowalk Hosts Section  -->
+            <div class="rainbow-service-area" id="hosts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <h2 class="title">Meet Our Photowalk Hosts</h2>
+                                <p class="subtitle">Learn from world-class photographers and educators</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row--15">
+                        <!-- Host 1 - Katrin Eismann -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="host-avatar" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: bold;">K</div>
+                                        <h4 class="title">Katrin Eismann</h4>
+                                        <p class="description"><strong>Cinematic Portraiture with Lightroom Mobile</strong></p>
+                                        <p class="description">Master the art of cinematic portraiture using Lightroom Mobile's powerful editing tools to create stunning, film-like portraits.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Host 2 - Lisa Carney -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="host-avatar" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: bold;">L</div>
+                                        <h4 class="title">Lisa Carney</h4>
+                                        <p class="description"><strong>Creative Portraits: A Hands-On Natural Light and Editing Photowalk</strong></p>
+                                        <p class="description">Explore creative portrait techniques using natural light and learn hands-on editing skills to enhance your images.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Host 3 - Tobi Shinobi -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="400">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="host-avatar" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: bold;">T</div>
+                                        <h4 class="title">Tobi Shinobi</h4>
+                                        <p class="description"><strong>Framing the Unexpected: An LA Street Photo Walk</strong></p>
+                                        <p class="description">Discover the art of street photography and learn to capture unexpected moments in the vibrant streets of Los Angeles.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Host 4 - Roger Seng -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="500">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="host-avatar" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: bold;">R</div>
+                                        <h4 class="title">Roger Seng</h4>
+                                        <p class="description"><strong>Chasing the Light: A Lightroom Mobile Photowalk</strong></p>
+                                        <p class="description">Learn to work with different lighting conditions and master Lightroom Mobile's tools to capture and enhance beautiful light.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Host 5 - Travis Keyes -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="600">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="host-avatar" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: bold;">T</div>
+                                        <h4 class="title">Travis Keyes</h4>
+                                        <p class="description"><strong>Telling the Story in Any Light: Capturing Motion and Mood</strong></p>
+                                        <p class="description">Master the art of storytelling through photography, learning to capture motion and mood in any lighting condition.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Photowalk Hosts Section  -->
+
+            <!-- Start Models Showcase Section  -->
+            <div class="rainbow-service-area" style="background: #f8fafc; padding: 80px 0;" id="models">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <h2 class="title">Meet Our Models</h2>
+                                <p class="subtitle">Follow our talented models and see their work on Instagram</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row--15">
+                        <!-- Model 1 - Gaia Brooks -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.instagram.com/gaiabrooks" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
+                                    <div class="inner text-center">
+                                        <div class="content">
+                                            <div class="model-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">G</div>
+                                            <h4 class="title">Gaia Brooks</h4>
+                                            <p style="color: #31A8FF; font-weight: 600; margin: 0;">
+                                                <i class="feather-instagram" style="margin-right: 5px;"></i>@gaiabrooks
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Model 2 - Dillena Okray -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.instagram.com/dillenaaa" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
+                                    <div class="inner text-center">
+                                        <div class="content">
+                                            <div class="model-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">D</div>
+                                            <h4 class="title">Dillena Okray</h4>
+                                            <p style="color: #31A8FF; font-weight: 600; margin: 0;">
+                                                <i class="feather-instagram" style="margin-right: 5px;"></i>@dillenaaa
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Model 3 - Andrea Salvia Munn -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.instagram.com/andrea_s101" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="400">
+                                    <div class="inner text-center">
+                                        <div class="content">
+                                            <div class="model-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">A</div>
+                                            <h4 class="title">Andrea Salvia Munn</h4>
+                                            <p style="color: #31A8FF; font-weight: 600; margin: 0;">
+                                                <i class="feather-instagram" style="margin-right: 5px;"></i>@andrea_s101
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Model 4 - Nihar Abhyankar -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.instagram.com/nihar.abhyankar" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="500">
+                                    <div class="inner text-center">
+                                        <div class="content">
+                                            <div class="model-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">N</div>
+                                            <h4 class="title">Nihar Abhyankar</h4>
+                                            <p style="color: #31A8FF; font-weight: 600; margin: 0;">
+                                                <i class="feather-instagram" style="margin-right: 5px;"></i>@nihar.abhyankar
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Model 5 - Alyena Jaye -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.instagram.com/alyenajaye" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="600">
+                                    <div class="inner text-center">
+                                        <div class="content">
+                                            <div class="model-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">A</div>
+                                            <h4 class="title">Alyena Jaye</h4>
+                                            <p style="color: #31A8FF; font-weight: 600; margin: 0;">
+                                                <i class="feather-instagram" style="margin-right: 5px;"></i>@alyenajaye
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Model 6 - Amara Blair -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.instagram.com/realamarablair" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="700">
+                                    <div class="inner text-center">
+                                        <div class="content">
+                                            <div class="model-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">A</div>
+                                            <h4 class="title">Amara Blair</h4>
+                                            <p style="color: #31A8FF; font-weight: 600; margin: 0;">
+                                                <i class="feather-instagram" style="margin-right: 5px;"></i>@realamarablair
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Models Showcase Section  -->
+
+            <!-- Start Photowalk Resources Section  -->
+            <div class="rainbow-service-area" id="resources">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <h2 class="title">Photowalk Resources</h2>
+                                <p class="subtitle">Everything you need to make the most of your photowalk experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row--15">
+                        <!-- What to Bring -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="#" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <h4 class="title">What to Bring</h4>
+                                            <p class="description">Essential gear checklist for photowalks: camera, extra batteries, memory cards, comfortable shoes, and water</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Lightroom Tips -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://helpx.adobe.com/lightroom-classic/how-to/lightroom-tips-tricks.html" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <h4 class="title">Lightroom Tips</h4>
+                                            <p class="description">Learn pro techniques for editing your photowalk images in Lightroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Share Your Photos -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.instagram.com/explore/tags/madewithlightroom/" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="400">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <h4 class="title">Share Your Photos</h4>
+                                            <p class="description">Use #MadeWithLightroom to share your photowalk images and connect with the community</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Meet the Team -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="meet-the-team.html" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="500">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <h4 class="title">Meet the Team</h4>
+                                            <p class="description">Get to know the Adobe Lightroom team leading the photowalks</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Download Lightroom -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="600">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <h4 class="title">Download Lightroom</h4>
+                                            <p class="description">Get the latest version of Lightroom to edit your photowalk images</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Contact Us -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="#contact" class="card-link">
+                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="700">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <h4 class="title">Contact Us</h4>
+                                            <p class="description">Questions about photowalks? Reach out to our team at the booth</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Photowalk Resources Section  -->
+
+        </div>
+        <!-- End Main Content  -->
+
+        <!-- Start MAX Portal CTA Section  -->
+        <div class="rainbow-service-area" style="background: #f8fafc; padding: 60px 0;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 col-12">
+                        <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200" style="text-align: center;">
+                            <div class="inner">
+                                <div class="content">
+                                    <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 32px;">
+                                        <i class="feather-calendar"></i>
+                                    </div>
+                                    <h4 class="title">View Your Schedule</h4>
+                                    <p class="description" style="margin-bottom: 25px;">Access the MAX portal to view your personalized schedule and sign up for photowalk sessions. All session registrations are managed through the official MAX portal.</p>
+                                    <a href="https://max.adobe.com/" target="_blank" class="btn-default" style="background: #31A8FF; border: none; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease;">
+                                        Access MAX Portal
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End MAX Portal CTA Section  -->
+
+        <!-- Start Footer Area  -->
+        <footer class="rainbow-footer footer-style-default variation-two">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget text-center text-lg-start">
+                                <h4 class="title">Photowalk Resources</h4>
+                                <div class="inner">
+                                    <ul class="footer-link link-hover">
+                                        <li><a href="https://max.adobe.com/" target="_blank">Adobe MAX 2025</a></li>
+                                        <li><a href="https://lightroom.adobe.com/" target="_blank">Learn Lightroom</a></li>
+                                        <li><a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank">Download Lightroom</a></li>
+                                        <li><a href="https://www.instagram.com/explore/tags/madewithlightroom/" target="_blank">#MadeWithLightroom</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget text-center text-lg-start">
+                                <h4 class="title">Stay Connected</h4>
+                                <div class="inner">
+                                    <h6 class="subtitle">Follow Adobe Lightroom</h6>
+                                    <ul class="social-icon social-default justify-content-center justify-content-lg-start">
+                                        <li><a href="https://www.instagram.com/lightroom" target="_blank">
+                                                <i class="feather-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.twitter.com/lightroom" target="_blank">
+                                                <i class="feather-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.threads.net/@lightroom" target="_blank">
+                                                <i class="feather-message-circle"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.youtube.com/lightroom" target="_blank">
+                                                <i class="feather-youtube"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area  -->
+        
+        <!-- Start Copy Right Area  -->
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-8 col-sm-12 col-12">
+                        <div class="copyright-left">
+                            <ul class="ft-menu link-hover">
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms And Condition</a>
+                                </li>
+                                <li>
+                                    <a href="#contact">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 col-12">
+                        <div class="copyright-right text-center text-lg-end">
+                            <p class="copyright-text">© Made with Lightroom 2025 - Adobe MAX Photowalks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copy Right Area  -->
+    </main>
+
+    <!-- All Scripts  -->
+    <!-- Start Top To Bottom Area  -->
+    <div class="rainbow-back-top">
+        <i class="feather-arrow-up"></i>
+    </div>
+    <!-- End Top To Bottom Area  -->
+    <!-- JS
+============================================ -->
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/waypoint.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/counterup.min.js"></script>
+    <script src="assets/js/vendor/feather.min.js"></script>
+    <script src="assets/js/vendor/sal.min.js"></script>
+    <script src="assets/js/vendor/masonry.js"></script>
+    <script src="assets/js/vendor/imageloaded.js"></script>
+    <script src="assets/js/vendor/magnify.min.js"></script>
+    <script src="assets/js/vendor/lightbox.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/vendor/easypie.js"></script>
+    <script src="assets/js/vendor/text-type.js"></script>
+    <script src="assets/js/vendor/jquery.style.swicher.js"></script>
+    <script src="assets/js/vendor/js.cookie.js"></script>
+    <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
