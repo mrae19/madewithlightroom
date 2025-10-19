@@ -18,183 +18,7 @@
     <link rel="stylesheet" href="assets/css/plugins/slick-theme.css">
     <link rel="stylesheet" href="assets/css/plugins/lightbox.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* Enhanced Card Styling for Adobe MAX Booth with Lightroom Brand Colors */
-        .rainbow-service.service-style-default {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 30, 54, 0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #e5e7eb;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        
-        .rainbow-service.service-style-default:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 30, 54, 0.15);
-            border-color: #31A8FF;
-        }
-        
-        .rainbow-service.service-style-default:active {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(49, 168, 255, 0.3);
-        }
-        
-        .rainbow-service .inner {
-            padding: 24px;
-        }
-        
-        .rainbow-service .title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #001E36;
-        }
-        
-        .rainbow-service .description {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #6b7280;
-            margin-bottom: 0;
-        }
-        
-        /* Mobile-optimized card styling */
-        @media (max-width: 768px) {
-            .rainbow-service {
-                margin-bottom: 20px;
-                padding: 20px;
-            }
-            
-            .rainbow-service .inner {
-                padding: 0;
-            }
-            
-            .rainbow-service .title {
-                font-size: 16px;
-                margin-bottom: 8px;
-            }
-            
-            .rainbow-service .description {
-                font-size: 13px;
-                line-height: 1.5;
-            }
-        }
-        
-        /* Card link styling */
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
-        .card-link:hover {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        /* Header button styling with Lightroom colors */
-        .header-btn .btn-default {
-            background: #001E36;
-            border: none;
-            color: white;
-            font-weight: 700;
-            border-radius: 8px;
-        }
-        
-        .header-btn .btn-default:hover {
-            background: #002A4A;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 30, 54, 0.3);
-        }
-        
-        /* Hero section gradient with Lightroom colors */
-        .theme-gradient {
-            background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Section titles with Lightroom colors */
-        .section-title .subtitle .theme-gradient {
-            background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Footer call-to-action with Lightroom colors */
-        .rainbow-callto-action .btn-default {
-            background: #31A8FF;
-            border: none;
-            color: white;
-        }
-        
-        .rainbow-callto-action .btn-default:hover {
-            background: #1E8FE8;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(49, 168, 255, 0.3);
-        }
-        
-        /* Logo sizing for Lightroom app icon */
-        .logo img {
-            height: 40px;
-            width: auto;
-            max-width: 200px;
-        }
-        
-        @media (max-width: 768px) {
-            .logo img {
-                height: 35px;
-            }
-        }
-        
-        /* Additional Lightroom brand color accents */
-        .rainbow-header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(49, 168, 255, 0.1);
-        }
-        
-        .mainmenu a:hover {
-            color: #31A8FF;
-        }
-        
-        .rainbow-footer {
-            background: linear-gradient(135deg, #001E36 0%, #001A2E 100%);
-            color: white;
-        }
-        
-        .rainbow-footer .title {
-            color: #31A8FF;
-        }
-        
-        .rainbow-footer .subtitle {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .rainbow-footer .footer-link a {
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .rainbow-footer .footer-link a:hover {
-            color: #31A8FF;
-        }
-        
-        .copyright-area {
-            background: #001A2E;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .copyright-area a {
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .copyright-area a:hover {
-            color: #31A8FF;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/global-styles.css">
 </head>
 
 <body>
@@ -205,6 +29,14 @@
             <div class="container position-relative">
                 <div class="row align-items-center row--0">
                     <div class="col-lg-3 col-md-6 col-4">
+                        <!-- Hamburger Menu -->
+                        <div class="hamburger-menu">
+                            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
                         <div class="logo">
                             <a href="index.html">
                                 <img class="logo-light" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
@@ -222,6 +54,27 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <div class="mobile-nav-header">
+                        <h3>Navigation</h3>
+                        <button class="close-btn" id="closeBtn" aria-label="Close navigation menu">
+                            <i class="feather-x"></i>
+                        </button>
+                    </div>
+                    <nav class="mobile-nav-menu">
+                        <ul>
+                            <li><a href="https://max.adobe.com/" target="_blank">Adobe MAX 2025</a></li>
+                            <li><a href="https://lightroom.adobe.com/" target="_blank">Lightroom Home</a></li>
+                            <li><a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank">Download Lightroom</a></li>
+                            <li><a href="meet-the-team.html">Meet the Team</a></li>
+                            <li><a href="max-2025-photowalks.html">Photowalks</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -446,6 +299,47 @@
     <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            // Open mobile menu
+            hamburgerBtn.addEventListener('click', function() {
+                mobileNav.classList.add('active');
+                hamburgerBtn.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+            
+            // Close mobile menu
+            closeBtn.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+            
+            // Close menu when clicking outside
+            mobileNav.addEventListener('click', function(e) {
+                if (e.target === mobileNav) {
+                    mobileNav.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

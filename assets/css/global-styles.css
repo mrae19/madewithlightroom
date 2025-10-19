@@ -1,0 +1,625 @@
+/* Global Styles for Adobe MAX Lightroom Booth - Made with Lightroom */
+/* Updated to match Adobe's design language and patterns */
+
+/* Adobe-inspired Card Styling */
+.rainbow-service.service-style-default {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.rainbow-service.service-style-default:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.rainbow-service.service-style-default:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.rainbow-service .inner {
+    padding: 32px 24px;
+}
+
+.rainbow-service .title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #2c2c2c;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.rainbow-service .description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6b6b6b;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Mobile-optimized card styling */
+@media (max-width: 768px) {
+    .rainbow-service {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    
+    .rainbow-service .inner {
+        padding: 0;
+    }
+    
+    .rainbow-service .title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .rainbow-service .description {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* Card link styling */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Adobe-inspired Button Styling */
+.header-btn .btn-default {
+    background: #1473e6;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 24px;
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-btn .btn-default:hover {
+    background: #0d66d0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(20, 115, 230, 0.3);
+}
+
+.header-btn .btn-default:active {
+    transform: translateY(0);
+    background: #0b5bb8;
+}
+
+/* Adobe-inspired Gradient Text */
+.theme-gradient {
+    background: linear-gradient(135deg, #1473e6 0%, #5c5cd1 50%, #e63888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Section titles with Adobe colors */
+.section-title .subtitle .theme-gradient {
+    background: linear-gradient(135deg, #1473e6 0%, #5c5cd1 50%, #e63888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+}
+
+/* Adobe-inspired Call-to-Action Buttons */
+.rainbow-callto-action .btn-default {
+    background: #1473e6;
+    border: none;
+    color: white;
+    border-radius: 24px;
+    padding: 14px 28px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rainbow-callto-action .btn-default:hover {
+    background: #0d66d0;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(20, 115, 230, 0.3);
+}
+
+/* Logo sizing for Lightroom app icon */
+.logo img {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 35px;
+    }
+}
+
+/* Adobe-inspired Header Styling */
+.rainbow-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.mainmenu a:hover {
+    color: #1473e6;
+}
+
+/* Adobe-inspired Footer Styling */
+.rainbow-footer {
+    background: #f8f8f8;
+    color: #2c2c2c;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.rainbow-footer .title {
+    color: #1473e6;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.rainbow-footer .subtitle {
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+.rainbow-footer .footer-link a {
+    color: #6b6b6b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 14px;
+}
+
+.rainbow-footer .footer-link a:hover {
+    color: #1473e6;
+}
+
+.copyright-area {
+    background: #ffffff;
+    color: #6b6b6b;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+}
+
+.copyright-area a {
+    color: #6b6b6b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.copyright-area a:hover {
+    color: #1473e6;
+}
+
+/* Models showcase styling */
+.model-avatar {
+    transition: transform 0.3s ease;
+}
+
+.rainbow-service:hover .model-avatar {
+    transform: scale(1.1);
+}
+
+.rainbow-service .inner.text-center a {
+    transition: all 0.3s ease;
+}
+
+.rainbow-service .inner.text-center a:hover {
+    color: #1473e6 !important;
+    transform: translateY(-1px);
+}
+
+/* Adobe-inspired Accent Colors */
+.rainbow-service .description strong {
+    color: #1473e6;
+    font-weight: 600;
+}
+
+/* Remove white background from section titles and subtitles */
+.rainbow-service-area {
+    background: transparent !important;
+}
+
+.section-title {
+    background: transparent !important;
+}
+
+.section-title .subtitle {
+    background: transparent !important;
+    color: #6b6b6b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Photowalk hosts styling */
+.host-avatar {
+    transition: transform 0.3s ease;
+}
+
+.rainbow-service:hover .host-avatar {
+    transform: scale(1.05);
+}
+
+.rainbow-service .description:first-of-type {
+    margin-bottom: 8px;
+}
+
+.rainbow-service .description:last-of-type {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Navigation styling */
+.photowalk-nav {
+    position: relative;
+    z-index: 10;
+}
+
+.photowalk-nav a:hover {
+    background: #1473e6 !important;
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(20, 115, 230, 0.3) !important;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .photowalk-nav ul {
+        gap: 10px !important;
+    }
+    
+    .photowalk-nav a {
+        padding: 8px 16px !important;
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .photowalk-nav ul {
+        gap: 8px !important;
+    }
+    
+    .photowalk-nav a {
+        padding: 6px 12px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* Adobe-inspired Button Hover Effects */
+.btn-default:hover {
+    background: #0d66d0 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(20, 115, 230, 0.3) !important;
+}
+
+/* Adobe-inspired Team Card Styling */
+.rainbow-team.team-style-default {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.rainbow-team.team-style-default:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rainbow-team .inner {
+    padding: 0;
+}
+
+.rainbow-team .thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.rainbow-team .thumbnail img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.rainbow-team:hover .thumbnail img {
+    transform: scale(1.05);
+}
+
+.rainbow-team .content {
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.rainbow-team .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.rainbow-team .subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.rainbow-team .team-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.rainbow-team .team-form i {
+    margin-right: 8px;
+    color: #1473e6;
+}
+
+.rainbow-team .description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.rainbow-team .social-share {
+    margin-top: 20px;
+}
+
+.rainbow-team .social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rainbow-team .social-icon li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.rainbow-team .social-icon li a:hover {
+    background: #1473e6;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Mobile responsiveness for team page */
+@media (max-width: 768px) {
+    .footer-widget {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .rainbow-team .content {
+        padding: 25px 20px;
+    }
+    
+    .rainbow-team .title {
+        font-size: 20px;
+    }
+    
+    .rainbow-team .subtitle {
+        font-size: 14px;
+    }
+    
+    .rainbow-team .description {
+        font-size: 14px;
+    }
+}
+
+/* Model section mobile responsiveness */
+@media (max-width: 768px) {
+    .model-avatar {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .content[style*="display: flex"] {
+        gap: 15px !important;
+    }
+    
+    .content[style*="display: flex"] .title {
+        font-size: 18px !important;
+    }
+    
+    .content[style*="display: flex"] p {
+        font-size: 14px !important;
+    }
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #2c2c2c;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-btn:hover span {
+    background-color: #1473e6;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    transition: left 0.3s ease;
+}
+
+.mobile-nav.active {
+    left: 0;
+}
+
+.mobile-nav-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav.active .mobile-nav-content {
+    transform: translateX(0);
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f8f8f8;
+}
+
+.mobile-nav-header h3 {
+    margin: 0;
+    color: #2c2c2c;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #6b6b6b;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #1473e6;
+}
+
+.mobile-nav-menu {
+    padding: 20px 0;
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav-menu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-menu li:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav-menu a {
+    display: block;
+    padding: 16px 20px;
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-menu a:hover {
+    background: #f8f8f8;
+    color: #1473e6;
+    padding-left: 30px;
+}
+
+/* Desktop: Hide hamburger menu */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/* Mobile: Show hamburger menu */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: inline-block;
+    }
+}

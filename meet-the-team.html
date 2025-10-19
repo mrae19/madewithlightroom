@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/plugins/slick-theme.css">
     <link rel="stylesheet" href="assets/css/plugins/lightbox.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/global-styles.css">
 </head>
 
 <body>
@@ -27,6 +28,14 @@
             <div class="container position-relative">
                 <div class="row align-items-center row--0">
                     <div class="col-lg-3 col-md-6 col-4">
+                        <!-- Hamburger Menu -->
+                        <div class="hamburger-menu">
+                            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
                         <div class="logo">
                             <a href="max-2025.html">
                                 <img class="logo-light" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
@@ -44,6 +53,27 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <div class="mobile-nav-header">
+                        <h3>Navigation</h3>
+                        <button class="close-btn" id="closeBtn" aria-label="Close navigation menu">
+                            <i class="feather-x"></i>
+                        </button>
+                    </div>
+                    <nav class="mobile-nav-menu">
+                        <ul>
+                            <li><a href="https://max.adobe.com/" target="_blank">Adobe MAX 2025</a></li>
+                            <li><a href="https://lightroom.adobe.com/" target="_blank">Lightroom Home</a></li>
+                            <li><a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank">Download Lightroom</a></li>
+                            <li><a href="max-2025.html">MAX 2025 Home</a></li>
+                            <li><a href="max-2025-photowalks.html">Photowalks</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -318,211 +348,47 @@
     <script src="assets/js/vendor/js.cookie.js"></script>
     <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <style>
-        /* Header button styling with Lightroom colors */
-        .header-btn .btn-default {
-            background: #001E36;
-            border: none;
-            color: white;
-            font-weight: 700;
-            border-radius: 8px;
-        }
-        
-        .header-btn .btn-default:hover {
-            background: #002A4A;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 30, 54, 0.3);
-        }
-        
-        /* Hero section gradient with Lightroom colors */
-        .theme-gradient {
-            background: linear-gradient(135deg, #31A8FF 0%, #001E36 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Header styling */
-        .rainbow-header {
-            border-bottom: 1px solid rgba(49, 168, 255, 0.1);
-        }
-        
-        .mainmenu a:hover {
-            color: #31A8FF;
-        }
-        
-        /* Logo sizing */
-        .logo img {
-            height: 40px;
-            width: auto;
-            max-width: 200px;
-        }
-        
-        @media (max-width: 768px) {
-            .logo img {
-                height: 35px;
-            }
-        }
-        
-        /* Footer styling with Lightroom colors */
-        .rainbow-footer {
-            background: linear-gradient(135deg, #001E36 0%, #001A2E 100%);
-            color: white;
-        }
-        
-        .rainbow-footer .title {
-            color: #31A8FF;
-        }
-        
-        .rainbow-footer .subtitle {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .rainbow-footer .footer-link a {
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .rainbow-footer .footer-link a:hover {
-            color: #31A8FF;
-        }
-        
-        .copyright-area {
-            background: #001A2E;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .copyright-area a:hover {
-            color: #31A8FF;
-        }
-        
-        /* Team card styling */
-        .rainbow-team.team-style-default {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 30, 54, 0.08);
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-        
-        .rainbow-team.team-style-default:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 30, 54, 0.15);
-        }
-        
-        .rainbow-team .inner {
-            padding: 0;
-        }
-        
-        .rainbow-team .thumbnail {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .rainbow-team .thumbnail img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .rainbow-team:hover .thumbnail img {
-            transform: scale(1.05);
-        }
-        
-        .rainbow-team .content {
-            padding: 30px 25px;
-            text-align: center;
-        }
-        
-        .rainbow-team .title {
-            font-size: 24px;
-            font-weight: 600;
-            color: #001E36;
-            margin-bottom: 8px;
-        }
-        
-        .rainbow-team .subtitle {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-        
-        .rainbow-team .team-form {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .rainbow-team .team-form i {
-            margin-right: 8px;
-            color: #31A8FF;
-        }
-        
-        .rainbow-team .description {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .rainbow-team .social-share {
-            margin-top: 20px;
-        }
-        
-        .rainbow-team .social-icon {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        
-        .rainbow-team .social-icon li a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #f8f9fa;
-            border-radius: 50%;
-            color: #666;
-            transition: all 0.3s ease;
-        }
-        
-        .rainbow-team .social-icon li a:hover {
-            background: #31A8FF;
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .footer-widget {
-                text-align: center;
-                margin-bottom: 30px;
-            }
+    
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const mobileNav = document.getElementById('mobileNav');
             
-            .rainbow-team .content {
-                padding: 25px 20px;
-            }
+            // Open mobile menu
+            hamburgerBtn.addEventListener('click', function() {
+                mobileNav.classList.add('active');
+                hamburgerBtn.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
             
-            .rainbow-team .title {
-                font-size: 20px;
-            }
+            // Close mobile menu
+            closeBtn.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
             
-            .rainbow-team .subtitle {
-                font-size: 14px;
-            }
+            // Close menu when clicking outside
+            mobileNav.addEventListener('click', function(e) {
+                if (e.target === mobileNav) {
+                    mobileNav.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
             
-            .rainbow-team .description {
-                font-size: 14px;
-            }
-        }
-    </style>
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
