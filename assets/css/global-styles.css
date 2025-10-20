@@ -106,7 +106,7 @@
 
 /* Adobe-inspired Gradient Text */
 .theme-gradient {
-    background: linear-gradient(135deg, #1473e6 0%, #5c5cd1 50%, #e63888 100%);
+    background: linear-gradient(135deg, #1473e6 0%, #010a32 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -115,7 +115,7 @@
 
 /* Section titles with Adobe colors */
 .section-title .subtitle .theme-gradient {
-    background: linear-gradient(135deg, #1473e6 0%, #5c5cd1 50%, #e63888 100%);
+    background: linear-gradient(135deg, #1473e6 0%, #00114c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -142,16 +142,28 @@
 }
 
 /* Logo sizing for Lightroom app icon */
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .logo img {
     height: 40px;
     width: auto;
     max-width: 200px;
+    display: block;
 }
 
 @media (max-width: 768px) {
     .logo img {
         height: 35px;
     }
+}
+
+/* Ensure hamburger and logo are aligned on the same line */
+.col-lg-3.col-md-6.col-4 {
+    display: flex;
+    align-items: center;
 }
 
 /* Adobe-inspired Header Styling */
@@ -473,6 +485,7 @@
 .hamburger-menu {
     display: inline-block;
     margin-right: 15px;
+    vertical-align: middle;
 }
 
 .hamburger-btn {
@@ -490,10 +503,10 @@
 
 .hamburger-btn span {
     display: block;
-    height: 3px;
+    height: 2px;
     width: 100%;
     background-color: #2c2c2c;
-    border-radius: 2px;
+    border-radius: 1px;
     transition: all 0.3s ease;
     transform-origin: center;
 }
