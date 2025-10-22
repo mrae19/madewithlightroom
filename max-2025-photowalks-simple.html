@@ -265,6 +265,14 @@
         .hero {
             text-align: center;
             padding: 40px 20px;
+            background: 
+                radial-gradient(circle at 20% 50%, #eb1000 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, #ff1f5a 0%, transparent 50%),
+                radial-gradient(circle at 50% 20%, #ff6b9d 0%, transparent 50%),
+                radial-gradient(circle at 90% 30%, #ffb347 0%, transparent 50%),
+                radial-gradient(circle at 30% 80%, #ffd700 0%, transparent 50%),
+                linear-gradient(135deg, #eb1000, #ff4466);
+            position: relative;
         }
 
         .hero h2 {
@@ -272,15 +280,27 @@
             font-weight: 800;
             margin-bottom: 20px;
             margin-top: 10px;
-            color: #2c2c2c;
+            color: #ffffff;
             line-height: 1.3;
         }
 
         .hero p {
             font-size: 18px;
-            color: #505050;
+            color: #ffffff;
             max-width: 800px;
             margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+
+        .hero p a {
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .hero p a:hover {
+            text-decoration: underline;
         }
 
         /* Content Sections */
@@ -512,19 +532,81 @@
             margin: 0;
         }
 
+        /* Social Media Section */
+        .social-section {
+            background: #f8f8f8;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .social-section h3 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #2c2c2c;
+        }
+
+        .social-section p {
+            font-size: 16px;
+            color: #505050;
+            margin-bottom: 30px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1473e6;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons a:hover {
+            background: #1473e6;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(20, 115, 230, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .social-section {
+                padding: 40px 20px;
+            }
+
+            .social-icons a {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+
         /* Footer */
         footer {
-            background: #f8f8f8;
+            background: #eb1000;
             padding: 40px 20px;
             text-align: center;
-            border-top: 1px solid #e8e8e8;
+            border-top: none;
             /* margin-top: 60px; */
         }
 
         footer p {
             font-size: 14px;
-            color: #6b6b6b;
+            color: #ffffff;
             margin-bottom: 10px;
+            opacity: 0.9;
         }
 
         .footer-links {
@@ -537,6 +619,12 @@
 
         .footer-links a {
             font-size: 14px;
+            color: #ffffff;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            opacity: 0.8;
         }
 
         /* Mobile Responsive */
@@ -735,7 +823,7 @@
     <section class="hero">
         <div class="container">
             <h2>Photowalk Resources</h2>
-            <p>Thank you for joining us for a Photowalk at MAX 2025! Connect with us, share your photos, and discover resources to enhance your photography journey.</p>
+            <p>Thank you for joining us for Photowalks at MAX. We can't wait to see what you've created. Below you'll find your wonderful hosts and models - be sure to tag them when you post your photos, and share with the hashtag <a href="https://www.instagram.com/explore/tags/adobemaxphotowalk/" target="_blank">#AdobeMAXphotowalk</a>.</p>
         </div>
     </section>
 
@@ -970,15 +1058,49 @@
         </div>
     </section>
 
+    <!-- Stay Connected Section -->
+    <section class="social-section">
+        <div class="container">
+            <h3>Stay Connected</h3>
+            <p>Follow Adobe Lightroom on social media</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/lightroom" target="_blank" aria-label="Instagram" title="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.twitter.com/lightroom" target="_blank" aria-label="X (Twitter)" title="X (Twitter)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.threads.net/@lightroom" target="_blank" aria-label="Threads" title="Threads">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path>
+                        <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4c1.11 0 2.11-.45 2.83-1.17"></path>
+                        <path d="M16 12c0-2.21-1.79-4-4-4"></path>
+                        <circle cx="12" cy="12" r="1" fill="currentColor"></circle>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/lightroom" target="_blank" aria-label="YouTube" title="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
-            <img src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom" style="height: 40px; margin-bottom: 20px;">
-            <p>© 2025 Adobe Inc. All rights reserved.</p>
+            <img src="assets/images/logo/max-logo.jpeg" alt="Adobe MAX" style="height: 80px; margin-bottom: 20px;">
             <div class="footer-links">
-                <a href="https://www.adobe.com/privacy.html" target="_blank">Privacy Policy</a>
-                <a href="https://www.adobe.com/legal/terms.html" target="_blank">Terms of Use</a>
                 <a href="https://max.adobe.com/" target="_blank">Adobe MAX</a>
+                <span style="color: #ffffff; opacity: 0.5;">|</span>
                 <a href="https://lightroom.adobe.com/" target="_blank">Lightroom Home</a>
             </div>
         </div>
