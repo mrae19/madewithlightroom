@@ -4,343 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-style-mode" content="0"> <!-- 0 == light, 1 == dark -->
-
-    <title>Adobe MAX Lightroom Booth - Made with Lightroom</title>
+    <title>Adobe MAX 2025 - Made with Lightroom</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-    <!-- CSS ============================================ -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/animation.css">
-    <link rel="stylesheet" href="assets/css/plugins/feature.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnify.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/plugins/lightbox.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/global-styles.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'adobe-clean', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #eb1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #000000;
+            color: #ffffff !important;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 300px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 16px 35px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <main class="page-wrapper">
-        
-        <!-- Start Header Area  -->
-        <header class="rainbow-header header-default header-not-transparent header-sticky">
-            <div class="container position-relative">
-                <div class="row align-items-center row--0">
-                    <div class="col-lg-3 col-md-6 col-4">
-                        <!-- Hamburger Menu -->
-                        <div class="hamburger-menu">
-                            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
-                        <div class="logo">
-                            <a href="javascript:location.reload()">
-                                <img class="logo-light" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
-                                <img class="logo-dark" src="assets/images/lr_appicon_macOS_1024x1024.png" alt="Adobe Lightroom Logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-md-6 col-8 position-static">
-                        <div class="header-right">
-                            <!-- Download Lightroom for Mobile Button -->
-                            <div class="header-btn">
-                                <a class="btn-default btn-small" href="https://apps.apple.com/app/adobe-lightroom/id804177739" target="_blank">
-                                    Download Lightroom
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mobile Navigation Menu -->
-            <div class="mobile-nav" id="mobileNav">
-                <div class="mobile-nav-content">
-                    <div class="mobile-nav-header">
-                        <h3>Navigation</h3>
-                        <button class="close-btn" id="closeBtn" aria-label="Close navigation menu">
-                            <i class="feather-x"></i>
-                        </button>
-                    </div>
-                    <nav class="mobile-nav-menu">
-                        <ul>
-                            <li><a href="https://max.adobe.com/" target="_blank">Adobe MAX 2025</a></li>
-                            <li><a href="https://lightroom.adobe.com/" target="_blank">Lightroom Home</a></li>
-                            <li><a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank">Download Lightroom</a></li>
-                            <li><a href="meet-the-team.html">Meet the Team</a></li>
-                            <li><a href="max-2025.html">MAX 2025 Home</a></li>
-                            <li><a href="max-2025-photowalks.html">Photowalks</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <!-- End Header Area  -->
-
-        <!-- Start Theme Style  -->
-        <div>
-            <div class="rainbow-gradient-circle"></div>
-            <div class="rainbow-gradient-circle theme-pink"></div>
+    <div class="content">
+        <div class="logo">
+            <img src="assets/images/logo/Adobe_Wordmark_RGB_White.png" alt="Adobe">
         </div>
-        <!-- End Theme Style  -->
-
-        <!-- Start Hero Area  -->
-        <div id="hero" class="rainbow-hero-area rainbow-section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="rainbow-hero-content text-center">
-                            <h1 class="title" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
-                                <span class="theme-gradient">Lightroom</span> at MAX 2025
-                            </h1>
-                            <p class="subtitle" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
-                                It was great to connect with you at MAX 2025. Explore the links below to learn what's new at MAX and to join our Prerelease programs
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Hero Area  -->
-
-        <!-- Start Main Content  -->
-        <div id="main-content" class="main-content">
-            
-            <!-- Start Links Section  -->
-            <div class="rainbow-service-area">
-                <div class="container">
-                    <div class="row row--15">
-                        <!-- New in Lightroom at MAX Card -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <a href="https://blog.adobe.com/en/publish/2024/10/15/adobe-max-2024-whats-new-in-lightroom" target="_blank" class="card-link">
-                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
-                                    <div class="inner">
-                                        <div class="content">
-                                            <h4 class="title">New in Lightroom at MAX</h4>
-                                            <p class="description">Discover the latest features and updates announced at Adobe MAX 2025</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Join Prerelease Program Card -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <a href="http://bit.ly/4honbQW" target="_blank" class="card-link">
-                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
-                                    <div class="inner">
-                                        <div class="content">
-                                            <h4 class="title">Join the Prerelease Program</h4>
-                                            <p class="description">Get early access to new Lightroom features and help shape the future</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Request a Feature Card -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <a href="https://feedback.photoshop.com/lightroom" target="_blank" class="card-link">
-                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="400">
-                                    <div class="inner">
-                                        <div class="content">
-                                            <h4 class="title">Request a Feature</h4>
-                                            <p class="description">Share your ideas and suggestions to help improve Lightroom</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Photowalk Schedule Card -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <a href="#contact" class="card-link">
-                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="500">
-                                    <div class="inner">
-                                        <div class="content">
-                                            <h4 class="title">Photowalk Schedule</h4>
-                                            <p class="description">Join us for guided photo walks around the conference venue and city</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Meet the Team Card -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <a href="meet-the-team.html" class="card-link">
-                                <div class="rainbow-service service-style-default" data-sal="slide-up" data-sal-duration="400" data-sal-delay="600">
-                                    <div class="inner">
-                                        <div class="content">
-                                            <h4 class="title">Meet the Team</h4>
-                                            <p class="description">Get to know the Adobe Lightroom team behind the magic</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- End Links Section  -->
-
-        </div>
-        <!-- End Main Content  -->
-
-        <!-- Start Footer Area  -->
-        <footer class="rainbow-footer footer-style-default variation-two">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="rainbow-footer-widget text-center text-lg-start">
-                                <h4 class="title">Resources</h4>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="https://max.adobe.com/" target="_blank">Adobe MAX 2024</a></li>
-                                        <li><a href="https://lightroom.adobe.com/" target="_blank">Learn more about Lightroom</a></li>
-                                        <li><a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank">Download Lightroom</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="rainbow-footer-widget text-center text-lg-start">
-                                <h4 class="title">Stay Connected</h4>
-                                <div class="inner">
-                                    <h6 class="subtitle">Follow Adobe Lightroom</h6>
-                                    <ul class="social-icon social-default justify-content-center justify-content-lg-start">
-                                        <li><a href="https://www.instagram.com/lightroom" target="_blank">
-                                                <i class="feather-instagram"></i>
-                                            </a>
-                                        </li>
-                                        <li><a href="https://www.twitter.com/lightroom" target="_blank">
-                                                <i class="feather-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li><a href="https://www.threads.net/@lightroom" target="_blank">
-                                                <i class="feather-message-circle"></i>
-                                            </a>
-                                        </li>
-                                        <li><a href="https://www.youtube.com/lightroom" target="_blank">
-                                                <i class="feather-youtube"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- End Footer Area  -->
-        
-        <!-- Start Copy Right Area  -->
-        <div class="copyright-area copyright-style-one">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-8 col-sm-12 col-12">
-                        <div class="copyright-left">
-                            <ul class="ft-menu link-hover">
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Terms And Condition</a>
-                                </li>
-                                <li>
-                                    <a href="#contact">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-4 col-sm-12 col-12">
-                        <div class="copyright-right text-center text-lg-end">
-                            <p class="copyright-text">© Made with Lightroom 2024 - Adobe MAX Booth</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Copy Right Area  -->
-    </main>
-
-    <!-- All Scripts  -->
-    <!-- Start Top To Bottom Area  -->
-    <div class="rainbow-back-top">
-        <i class="feather-arrow-up"></i>
+        <a href="photowalks.html" class="cta-button">Photowalks at MAX</a>
     </div>
-    <!-- End Top To Bottom Area  -->
-    <!-- JS
-============================================ -->
-    <script src="assets/js/vendor/modernizr.min.js"></script>
-    <script src="assets/js/vendor/jquery.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="assets/js/vendor/waypoint.min.js"></script>
-    <script src="assets/js/vendor/wow.min.js"></script>
-    <script src="assets/js/vendor/counterup.min.js"></script>
-    <script src="assets/js/vendor/feather.min.js"></script>
-    <script src="assets/js/vendor/sal.min.js"></script>
-    <script src="assets/js/vendor/masonry.js"></script>
-    <script src="assets/js/vendor/imageloaded.js"></script>
-    <script src="assets/js/vendor/magnify.min.js"></script>
-    <script src="assets/js/vendor/lightbox.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/easypie.js"></script>
-    <script src="assets/js/vendor/text-type.js"></script>
-    <script src="assets/js/vendor/jquery.style.swicher.js"></script>
-    <script src="assets/js/vendor/js.cookie.js"></script>
-    <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-    
-    <!-- Hamburger Menu JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerBtn = document.getElementById('hamburgerBtn');
-            const closeBtn = document.getElementById('closeBtn');
-            const mobileNav = document.getElementById('mobileNav');
-            
-            // Open mobile menu
-            hamburgerBtn.addEventListener('click', function() {
-                mobileNav.classList.add('active');
-                hamburgerBtn.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            });
-            
-            // Close mobile menu
-            closeBtn.addEventListener('click', function() {
-                mobileNav.classList.remove('active');
-                hamburgerBtn.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Restore scrolling
-            });
-            
-            // Close menu when clicking outside
-            mobileNav.addEventListener('click', function(e) {
-                if (e.target === mobileNav) {
-                    mobileNav.classList.remove('active');
-                    hamburgerBtn.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Close menu when pressing Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
-                    mobileNav.classList.remove('active');
-                    hamburgerBtn.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
