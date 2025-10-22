@@ -31,7 +31,7 @@
         /* Header */
         header {
             background: #eb1000;
-            padding: 40px 20px;
+            padding: 30px 20px 10px;
             color: white;
             position: relative;
         }
@@ -49,10 +49,13 @@
         }
 
         .logo-text {
-            font-size: 36px;
-            font-weight: 700;
             margin-bottom: 5px;
-            color: white;
+            height: 30px;
+        }
+
+        .logo-text img {
+            height: 30px;
+            width: auto;
         }
 
         .event-name {
@@ -154,9 +157,13 @@
         }
 
         .mobile-menu-title .logo-text {
-            font-size: 36px;
-            font-weight: 700;
             margin-bottom: 5px;
+            height: 30px;
+        }
+
+        .mobile-menu-title .logo-text img {
+            height: 30px;
+            width: auto;
         }
 
         .mobile-menu-title .event-name {
@@ -213,7 +220,11 @@
 
         @media (max-width: 768px) {
             .logo-text {
-                font-size: 28px;
+                height: 24px;
+            }
+
+            .logo-text img {
+                height: 24px;
             }
 
             .event-name {
@@ -229,7 +240,11 @@
             }
 
             .mobile-menu-title .logo-text {
-                font-size: 28px;
+                height: 24px;
+            }
+
+            .mobile-menu-title .logo-text img {
+                height: 24px;
             }
 
             .mobile-menu-title .event-name {
@@ -249,13 +264,14 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 80px 20px 60px;
+            padding: 40px 20px;
         }
 
         .hero h2 {
             font-size: 40px;
-            font-weight: 600;
-            margin-bottom: 30px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            margin-top: 10px;
             color: #2c2c2c;
             line-height: 1.3;
         }
@@ -280,8 +296,8 @@
 
         .section h3 {
             font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 30px;
+            font-weight: 800;
+            margin-bottom: 8px;
             color: #2c2c2c;
         }
 
@@ -475,8 +491,8 @@
         }
 
         .person-name {
-            font-size: 36px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 800;
             color: #2c2c2c;
             margin-bottom: 8px;
             line-height: 1.2;
@@ -534,7 +550,7 @@
             }
 
             .section h3 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
             .section h4 {
@@ -628,7 +644,7 @@
 
         .cta-section h3 {
             font-size: 36px;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 20px;
             color: white;
         }
@@ -683,9 +699,11 @@
     <header>
         <div class="header-content">
             <div class="header-text">
-                <div class="logo-text">Adobe</div>
+                <div class="logo-text">
+                    <img src="assets/images/logo/Adobe_Wordmark_RGB_White.png" alt="Adobe">
+                </div>
                 <div class="event-name">Adobe MAX 2025</div>
-                <h1 class="page-title">Photowalks</h1>
+                <!-- <h1 class="page-title">Photowalks</h1> -->
             </div>
             <button class="hamburger-menu" aria-label="Menu">
                 <span></span>
@@ -699,27 +717,25 @@
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
         <div class="mobile-menu-header">
             <div class="mobile-menu-title">
-                <div class="logo-text">Adobe</div>
+                <div class="logo-text">
+                    <img src="assets/images/logo/Adobe_Wordmark_RGB_White.png" alt="Adobe">
+                </div>
                 <div class="event-name">Adobe MAX 2025</div>
-                <div class="page-title">Photowalks</div>
+                <!-- <div class="page-title">Photowalks</div> -->
             </div>
             <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close menu">×</button>
         </div>
         <nav class="mobile-menu-nav">
-            <a href="index.html">Home</a>
-            <a href="max-2025.html">Lightroom at MAX</a>
             <a href="max-2025-photowalks-simple.html" class="current">Photowalks</a>
-            <a href="meet-the-team.html">Meet the Team</a>
-            <a href="#resources">Resources</a>
-            <a href="https://max.adobe.com/" target="_blank">Adobe MAX</a>
+            <a href="https://max.adobe.com/" target="_blank">MAX Homepage</a>
         </nav>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Photowalks @MAX</h2>
-            <p>Thank you for joining our photowalks in Los Angeles! Connect with us, share your photos, and discover resources to enhance your photography journey.</p>
+            <h2>Photowalk Resources</h2>
+            <p>Thank you for joining us for a Photowalk at MAX 2025! Connect with us, share your photos, and discover resources to enhance your photography journey.</p>
         </div>
     </section>
 
@@ -803,7 +819,7 @@
     <section class="section">
         <div class="container">
             <h3>Meet Our Models</h3>
-            <p>Follow our talented models and see their work on Instagram.</p>
+            <p>We encourage you to share your photos from the photowalks and be sure to tag and support our team of models.</p>
 
             <div class="people-list">
                 <a href="https://www.instagram.com/gaiabrooks" target="_blank" class="person-link">
@@ -906,7 +922,7 @@
                 <a href="https://blog.adobe.com/en/topics/photography" target="_blank">
                     <div class="resource-item">
                         <div class="resource-image">
-                            <img src="assets/images/portfolio/portfolio-01.jpg" alt="Photography Blog">
+                            <img src="assets/images/academythumbs/astro.jpeg" alt="Photography Blog">
                         </div>
                         <div class="resource-content">
                             <h5>Photography Blog</h5>
@@ -918,7 +934,7 @@
                 <a href="https://lightroom.adobe.com/learn/tutorials" target="_blank">
                     <div class="resource-item">
                         <div class="resource-image">
-                            <img src="assets/images/portfolio/portfolio-02.jpg" alt="Lightroom Academy">
+                            <img src="assets/images/academythumbs/camping.jpeg" alt="Lightroom Academy">
                         </div>
                         <div class="resource-content">
                             <h5>Lightroom Academy</h5>
@@ -930,7 +946,7 @@
                 <a href="https://community.adobe.com/t5/lightroom/ct-p/ct-lightroom" target="_blank">
                     <div class="resource-item">
                         <div class="resource-image">
-                            <img src="assets/images/portfolio/portfolio-03.jpg" alt="Lightroom Community">
+                            <img src="assets/images/academythumbs/overland1.jpeg" alt="Lightroom Community">
                         </div>
                         <div class="resource-content">
                             <h5>Lightroom Community</h5>
@@ -942,7 +958,7 @@
                 <a href="https://helpx.adobe.com/lightroom-classic/how-to/lightroom-tips-tricks.html" target="_blank">
                     <div class="resource-item">
                         <div class="resource-image">
-                            <img src="assets/images/portfolio/portfolio-04.jpg" alt="Learn Lightroom">
+                            <img src="assets/images/academythumbs/vanlife.jpeg" alt="Learn Lightroom">
                         </div>
                         <div class="resource-content">
                             <h5>Learn Lightroom</h5>
@@ -950,10 +966,6 @@
                         </div>
                     </div>
                 </a>
-
-                
-
-                
             </div>
         </div>
     </section>
