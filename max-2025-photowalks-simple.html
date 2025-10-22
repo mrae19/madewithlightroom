@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adobe MAX 2025 Photowalks - Made with Lightroom</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/lr_appicon_macOS_1024x1024.png">
     
     <style>
         * {
@@ -617,6 +617,64 @@
             margin: 60px auto;
             max-width: 900px;
         }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1473e6 0%, #0d66d0 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h3 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: white;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #1473e6 !important;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .cta-section h3 {
+                font-size: 28px;
+            }
+
+            .cta-section p {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 16px 35px;
+            }
+        }
     </style>
 </head>
 
@@ -660,7 +718,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Adobe Photography Team Loves MAX!</h2>
+            <h2>Photowalks @MAX</h2>
             <p>Thank you for joining our photowalks in Los Angeles! Connect with us, share your photos, and discover resources to enhance your photography journey.</p>
         </div>
     </section>
@@ -685,7 +743,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.instagram.com/lisacarney" target="_blank" class="person-link">
+                <a href="https://www.instagram.com/lisa_carney_photography" target="_blank" class="person-link">
                     <div class="person">
                         <div class="person-photo">
                             <img src="assets/images/hosts/host_katrin.png" alt="Lisa Carney">
@@ -693,7 +751,7 @@
                         <div class="person-info">
                             <h3 class="person-name">Lisa Carney</h3>
                             <p class="person-title">Photographer & Retoucher</p>
-                            <p class="person-handle">@lisacarney</p>
+                            <p class="person-handle">@lisa_carney_photography</p>
                         </div>
                     </div>
                 </a>
@@ -724,7 +782,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.instagram.com/traviskeyes" target="_blank" class="person-link">
+                <a href="https://www.instagram.com/twkeyes" target="_blank" class="person-link">
                     <div class="person">
                         <div class="person-photo">
                             <img src="assets/images/hosts/host_katrin.png" alt="Travis Keyes">
@@ -732,7 +790,7 @@
                         <div class="person-info">
                             <h3 class="person-name">Travis Keyes</h3>
                             <p class="person-title">Photographer</p>
-                            <p class="person-handle">@traviskeyes</p>
+                            <p class="person-handle">@twkeyes</p>
                         </div>
                     </div>
                 </a>
@@ -829,6 +887,14 @@
         </div>
     </section>
 
+    <!-- CTA Section - Prerelease Program -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Join the Lightroom Prerelease Program</h3>
+            <p>Get early access to new features before they launch and share your feedback directly with the Lightroom team. Help shape the future of photography editing while staying ahead of the curve.</p>
+            <a href="https://prerelease.adobe.com/" target="_blank" class="cta-button">Join Prerelease</a>
+        </div>
+    </section>
 
     <!-- Resources -->
     <section class="section section-alt">
@@ -885,29 +951,9 @@
                     </div>
                 </a>
 
-                <a href="https://helpx.adobe.com/lightroom-cc/how-to/lightroom-mobile-tutorials.html" target="_blank">
-                    <div class="resource-item">
-                        <div class="resource-image">
-                            <img src="assets/images/portfolio/portfolio-05.jpg" alt="Learn Lightroom Mobile">
-                        </div>
-                        <div class="resource-content">
-                            <h5>Learn Lightroom Mobile</h5>
-                            <p>Master editing on the go</p>
-                        </div>
-                    </div>
-                </a>
+                
 
-                <a href="https://www.instagram.com/explore/tags/madewithlightroom/" target="_blank">
-                    <div class="resource-item">
-                        <div class="resource-image">
-                            <img src="assets/images/portfolio/portfolio-06.jpg" alt="#MadeWithLightroom">
-                        </div>
-                        <div class="resource-content">
-                            <h5>#MadeWithLightroom</h5>
-                            <p>Share your photos with the community</p>
-                        </div>
-                    </div>
-                </a>
+                
             </div>
         </div>
     </section>
